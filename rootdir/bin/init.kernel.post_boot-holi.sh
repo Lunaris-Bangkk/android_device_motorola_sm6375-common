@@ -241,6 +241,10 @@ done
 
 echo N > /sys/module/lpm_levels/parameters/sleep_disabled
 
+# Sched
+echo 95 > /proc/sys/kernel/sched_upmigrate
+echo 85 > /proc/sys/kernel/sched_downmigrate
+
 configure_memory_parameters
 
 setprop vendor.post_boot.parsed 1
